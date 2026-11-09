@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>ระบบทะเบียนคุมและวิเคราะห์งบประมาณ (FBCR) - วพบ.สวรรค์ประชารักษ์ นครสวรรค์</title>
+  
+  <!-- System Versioning & Information -->
+  <meta name="version" content="v1.1.21">
+  <meta name="build" content="2026.11.09">
+  <meta name="author" content="งานการเงินและพัสดุ ร่วมกับ ศูนย์เทคโนโลยีสารสนเทศ (CitCentre) วพบ.สวรรค์ประชารักษ์ นครสวรรค์">
+  <meta name="theme-color" content="#059669">
+
+  <!-- Open Graph & Social Preview (LINE / Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://citbcnsprnw.github.io/FBCR/">
+  <meta property="og:title" content="ระบบทะเบียนคุมและวิเคราะห์งบประมาณ (FBCR)">
+  <meta property="og:description" content="ระบบทะเบียนคุมและวิเคราะห์งบประมาณประจำงวด (แบบ 2221) วิทยาลัยพยาบาลบรมราชชนนี สวรรค์ประชารักษ์ นครสวรรค์ คณะพยาบาลศาสตร์ สถาบันพระบรมราชชนก">
+  <meta property="og:image" content="https://lh5.googleusercontent.com/d/1tDVKF6qFEl7_avxewudlClYsk9qkrgop">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ระบบทะเบียนคุมและวิเคราะห์งบประมาณ (FBCR)">
+  <meta name="twitter:description" content="ระบบทะเบียนคุมและวิเคราะห์งบประมาณประจำงวด วิทยาลัยพยาบาลบรมราชชนนี สวรรค์ประชารักษ์ นครสวรรค์">
+  <meta name="twitter:image" content="https://lh5.googleusercontent.com/d/1tDVKF6qFEl7_avxewudlClYsk9qkrgop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://lh5.googleusercontent.com/d/1tDVKF6qFEl7_avxewudlClYsk9qkrgop">
+  <link rel="apple-touch-icon" href="https://lh5.googleusercontent.com/d/1tDVKF6qFEl7_avxewudlClYsk9qkrgop">
+
+  <!-- Google Font: Sarabun -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Meta Refresh Instant Redirect (0 วินาที) -->
+  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbx5sqdK-3fmJgdbgN7V5DBKstsqNsuo8LDTucoU7Sid_lddhwN5eaDSyXb11IzHJZRjew/exec">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 20%, #f0fdf4 0%, #e2e8f0 100%);
+      color: #0f172a;
+    }
+
+    .portal-card {
+      background: #ffffff;
+      padding: 40px 32px 32px 32px;
+      border-radius: 28px;
+      box-shadow: 0 20px 40px -15px rgba(5, 150, 105, 0.2), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      max-width: 440px;
+      width: 90%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* แถบ Gradient ด้านบน */
+    .portal-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+    }
+
+    .logo-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .logo-halo {
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      right: -12px;
+      bottom: -12px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, rgba(16, 185, 129, 0) 70%);
+      animation: pulse-ring 2.4s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    @keyframes pulse-ring {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.22); opacity: 0.25; }
+    }
+
+    .logo-img {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #ffffff;
+      padding: 5px;
+      box-shadow: 0 10px 25px rgba(5, 150, 105, 0.25);
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge-code {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      border: 1px solid #a7f3d0;
+    }
+
+    .system-title {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: #064e3b;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .system-sub {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.45;
+      margin-bottom: 22px;
+    }
+
+    .spinner-ring {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 3.5px solid #d1fae5;
+      border-top-color: #059669;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .redirect-status {
+      font-size: 0.92rem;
+      color: #059669;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .btn-launch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-launch:hover {
+      background: linear-gradient(135deg, #047857 0%, #064e3b 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.45);
+    }
+
+    .footer-meta {
+      margin-top: 20px;
+      font-size: 0.74rem;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+  </style>
+
+  <!-- JavaScript Instant Redirection -->
+  <script>
+    var targetUrl = "https://script.google.com/macros/s/AKfycbx5sqdK-3fmJgdbgN7V5DBKstsqNsuo8LDTucoU7Sid_lddhwN5eaDSyXb11IzHJZRjew/exec";
+    try {
+      window.location.replace(targetUrl);
+    } catch(e) {
+      window.location.href = targetUrl;
+    }
+  </script>
+</head>
+<body>
+
+  <div class="portal-card">
+    <div class="logo-container">
+      <div class="logo-halo"></div>
+      <img src="https://lh5.googleusercontent.com/d/1tDVKF6qFEl7_avxewudlClYsk9qkrgop" alt="BCNSPRNW Logo" class="logo-img">
+    </div>
+
+    <div>
+      <span class="badge-code">FBCR &bull; OFFICIAL PORTAL</span>
+    </div>
+    
+    <div class="system-title">ระบบทะเบียนคุมและวิเคราะห์งบประมาณ</div>
+    <div class="system-sub">วิทยาลัยพยาบาลบรมราชชนนี สวรรค์ประชารักษ์ นครสวรรค์<br>คณะพยาบาลศาสตร์ สถาบันพระบรมราชชนก</div>
+
+    <div class="spinner-ring"></div>
+    <div class="redirect-status">กำลังนำท่านเข้าสู่ระบบ FBCR...</div>
+
+    <!-- ปุ่มสำรองกรณีเบราว์เซอร์หน่วงเวลา -->
+    <a href="https://script.google.com/macros/s/AKfycbx5sqdK-3fmJgdbgN7V5DBKstsqNsuo8LDTucoU7Sid_lddhwN5eaDSyXb11IzHJZRjew/exec" class="btn-launch">
+      <span>🚀</span>
+      <span>คลิกที่นี่เพื่อเข้าสู่ระบบทันที</span>
+    </a>
+
+    <div class="footer-meta">
+      v1.1.21 &bull; Build 2026.11.09<br>
+      กลุ่มงานการเงินและพัสดุ ร่วมกับ ศูนย์เทคโนโลยีสารสนเทศ (CitCentre)
+    </div>
+  </div>
+
+</body>
+</html>
